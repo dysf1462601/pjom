@@ -1,0 +1,189 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.skadiseye.api</groupId>
+	<artifactId>pjom</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>pjom</name>
+	<url>http://maven.apache.org</url>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<spring_version>3.2.9.RELEASE</spring_version>
+		<mybatis_version>3.2.8</mybatis_version>
+		<spring_mybatis_version>1.2.3</spring_mybatis_version>
+		<perf4j_version>0.9.16</perf4j_version>
+		<aspectj_version>1.6.12</aspectj_version>
+		<aopalliance_version>1.0</aopalliance_version>
+		<mysql_version>5.1.38</mysql_version>
+		<mariadb_version>1.3.4</mariadb_version>
+
+		<paginator_version>1.2.17</paginator_version>
+		<cglib_version>2.2</cglib_version>
+		<quartz_version>1.8.6</quartz_version>
+		<jedis_version>2.6.2</jedis_version>
+		<spring-data-redis_version>1.5.0.RELEASE</spring-data-redis_version>
+		<mina_version>1.1.7</mina_version>
+		<gson_version>2.2.2</gson_version>
+		<log4j_version>1.2.16</log4j_version>
+		<slf4j_version>1.6.2</slf4j_version>
+		<axiom_version>1.2.10</axiom_version>
+		<oro_version>2.0.8</oro_version>
+		<jaxen_version>1.1.6</jaxen_version>
+		<xalan_version>2.6.0</xalan_version>
+		<xalan_serializer_version>2.7.2</xalan_serializer_version>
+		<velocity_version>1.5</velocity_version>
+		<xerces_version>2.6.2</xerces_version>
+		<xmlsec_version>1.0.5D2</xmlsec_version>
+		<xml-apis_version>1.0.b2</xml-apis_version>
+		<xom_version>1.0</xom_version>
+		<jcommon_version>1.0.23</jcommon_version>
+		<woodstox_version>4.1.1</woodstox_version>
+		<i18n_version>3.3</i18n_version>
+		<jta_version>1.1</jta_version>
+		<commons-pool_version>1.6</commons-pool_version>
+		<commons-pool2_version>2.4.1</commons-pool2_version>
+		<commons-dbcp_version>1.4</commons-dbcp_version>
+		<commons-beanutils_version>1.8.0</commons-beanutils_version>
+		<commons-codec_version>1.6</commons-codec_version>
+		<commons-lang_version>2.5</commons-lang_version>
+		<commons-collections_version>3.2.1</commons-collections_version>
+		<dom4j_version>1.6.1</dom4j_version>
+		<commons-httpclient_version>3.1</commons-httpclient_version>
+		<httpclient_version>4.2.1</httpclient_version>
+		<jackson_version>2.3.3</jackson_version>
+		<jackson_mapper_version>1.9.12</jackson_mapper_version>
+
+		<commons-io_version>2.1</commons-io_version>
+		<oracle_version>10.2.0.4.0</oracle_version>
+
+		<fastjson_version>1.1.39</fastjson_version>
+		<xstream_version>1.4.1</xstream_version>
+		<bsf_version>3.1</bsf_version>
+		<zookeeper_version>3.4.6</zookeeper_version>
+		<zkclient_version>0.1</zkclient_version>
+		<curator_version>2.5.0</curator_version>
+		<xmemcached_version>1.3.6</xmemcached_version>
+		<thrift_version>0.8.0</thrift_version>
+		<hessian_version>4.0.7</hessian_version>
+		<hessian_lite_version>3.2.1-fixed-2</hessian_lite_version>
+		<servlet_version>3.1.0</servlet_version>
+		<jetty_version>9.2.11.v20150529</jetty_version>
+		<validation_version>1.0.0.GA</validation_version>
+		<hibernate_validator_version>4.2.0.Final</hibernate_validator_version>
+		<jcache_version>0.4</jcache_version>
+		<tomcat_embed_version>8.0.11</tomcat_embed_version>
+		<bcprov-jdk16_version>1.45</bcprov-jdk16_version>
+
+		<dubbo_version>2.8.4</dubbo_version>
+		<javassist_version>3.15.0-GA</javassist_version>
+		<netty_version>3.7.0.Final</netty_version>
+
+		<grizzly_version>2.1.4</grizzly_version>
+		<sorcerer_version>0.8</sorcerer_version>
+		<sca_version>2.0-M5.1</sca_version>
+		<guice_version>3.0</guice_version>
+		<citrus-webx_version>3.0.8</citrus-webx_version>
+
+		<javax_ws_rs_version>2.0</javax_ws_rs_version>
+		<kryo_version>2.24.0</kryo_version>
+		<kryo-serializers_version>0.26</kryo-serializers_version>
+		<fst_version>1.55</fst_version>
+		<nailator_version>0.4.2</nailator_version>
+		<image-scaling_version>0.8.5</image-scaling_version>
+		<icu4j_version>3.4.4</icu4j_version>
+
+		<!-- Log libs -->
+		<commons-logging_version>1.1</commons-logging_version>
+		<logback_version>1.0.6</logback_version>
+
+		<!-- Test libs -->
+		<junit_version>4.10</junit_version>
+		<easymock_version>3.0</easymock_version>
+		<jmockit_version>0.999.8</jmockit_version>
+
+		<!-- Build args -->
+		<skip_maven_deploy>false</skip_maven_deploy>
+		<updateReleaseInfo>true</updateReleaseInfo>
+		<project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
+
+		<!-- for maven compiler plugin -->
+		<maven_compiler_plugin_version>2.3.2</maven_compiler_plugin_version>
+		<java_source_version>1.7</java_source_version>
+		<java_target_version>1.7</java_target_version>
+		<file_encoding>UTF-8</file_encoding>
+
+		<maven_source_plugin_version>2.1.1</maven_source_plugin_version>
+		<maven_jar_plugin_version>2.3.2</maven_jar_plugin_version>
+		<maven_war_plugin_version>2.1.1</maven_war_plugin_version>
+		<maven_install_plugin_version>2.3.1</maven_install_plugin_version>
+		<maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
+
+		<maven-surefire-plugin_version>2.17</maven-surefire-plugin_version>
+
+		<!-- manual add jar -->
+		<pinyin4j_version>1.1.0</pinyin4j_version>
+
+
+
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>${commons-logging_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	
+	<build>
+		<plugins>
+			<plugin>  
+                <artifactId>maven-assembly-plugin</artifactId>  
+                <configuration>  
+                    <archive>  
+                        <manifest>  
+                            <mainClass>com.skadiseye.api.App</mainClass>  
+                        </manifest>  
+                    </archive>  
+                    <descriptorRefs>  
+                        <descriptorRef>jar-with-dependencies</descriptorRef>  
+                    </descriptorRefs>  
+                </configuration>  
+            </plugin>  
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	
+</project>
